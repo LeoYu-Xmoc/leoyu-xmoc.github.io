@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#081b22">
+<title>Leo Yu · Mechanical Engineering</title>
+<meta name="description" content="Research and selected publications of Leo Yu in acoustic imaging, vibration signal processing and rotating machinery diagnostics.">
+<style>
+:root{color-scheme:dark;--bg:#081b22;--ink:#edf6f1;--muted:#b1c4c4;--mint:#94f7cc;--line:#365153;--mono:ui-monospace,Consolas,monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:20px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.58 system-ui,-apple-system,sans-serif}a{color:inherit;text-underline-offset:4px}a:focus-visible,button:focus-visible{outline:3px solid #e3ae6d;outline-offset:4px}
+.wrap{width:min(1190px,90%);margin:auto}header{border-bottom:1px solid var(--line)}header .wrap,footer .wrap{display:flex;align-items:center;justify-content:space-between;padding:20px 0;gap:20px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:650}.mark{display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--mint);color:var(--mint);font:600 16px var(--mono);border-radius:50%}nav{display:flex;gap:clamp(12px,3vw,36px)}nav a{font-size:14px;text-decoration:none;color:var(--muted)}a:hover{color:var(--mint)}.hero{display:grid;grid-template-columns:.95fr 1.05fr;align-items:center;gap:6%;padding:clamp(60px,8vw,112px) 0}.eyebrow,.meta,.control,.paper small{font:12px/1.5 var(--mono);letter-spacing:.08em}.eyebrow{color:var(--mint);text-transform:uppercase}.hero h1{font-size:clamp(76px,8.7vw,132px);line-height:.98;margin:20px 0 24px;letter-spacing:-.075em;font-weight:570}.hero p{color:var(--muted);max-width:520px;font-size:clamp(17px,1.55vw,22px)}.action{display:inline-block;background:var(--mint);color:#082321;border-radius:4px;font-weight:650;padding:11px 18px;text-decoration:none;margin-top:12px}.action:hover{background:white;color:#082321}
+figure{margin:0}.scope{background:radial-gradient(ellipse at 50% 55%,#143b40,#0a222a 72%);border:1px solid #426365;border-radius:9px;padding:17px 20px}.scopehead,.scopefoot{display:flex;gap:10px;align-items:center;justify-content:space-between}.scopehead{color:#cee1df}.scopehead span:last-child{color:var(--mint)}canvas{width:100%;height:auto;display:block}.control{border:0;background:transparent;color:#b5ccca;padding:5px 9px;cursor:pointer;border-radius:3px}.control[aria-pressed=true]{background:#9af2cd;color:#092822}.scopefoot{border-top:1px solid var(--line);padding-top:11px;color:var(--muted)}figcaption{color:var(--muted);font-size:13px;margin:9px 0 0}
+section.band{border-top:1px solid var(--line);padding:clamp(44px,6vw,80px) 0}h2{margin:0 0 28px;font-size:clamp(30px,4vw,52px);font-weight:550;letter-spacing:-.052em;line-height:1.13}.topics{display:grid;grid-template-columns:repeat(3,1fr);gap:3%}.topic{border-top:2px solid #619089;padding-top:20px}.topic h3{margin:0;font-size:23px;line-height:1.2;letter-spacing:-.035em}.topic p,.bio p{color:var(--muted);margin:12px 0 0}.paper{display:grid;grid-template-columns:66px 1fr 26px;gap:14px;border-top:1px solid var(--line);padding:19px 0;text-decoration:none;align-items:baseline}.paper small{color:var(--mint)}.paper strong{display:block;font-size:clamp(18px,1.75vw,24px);font-weight:520;line-height:1.4}.paper em{display:block;font-size:14px;font-style:normal;color:var(--muted);margin-top:5px}.arrow{font-size:19px;color:var(--mint)}.bio{display:grid;grid-template-columns:1fr 2fr;gap:6%}.bio p{margin:0 0 14px;max-width:720px;font-size:18px}footer{border-top:1px solid var(--line);color:var(--muted)}footer .wrap{font-size:14px}.skip{position:absolute;left:10px;top:-100px;background:var(--ink);color:var(--bg);padding:8px}.skip:focus{top:0}
+@media(max-width:800px){.hero{grid-template-columns:1fr;gap:34px}.hero p{max-width:640px}.scopebox{max-width:640px;width:100%}.topics{grid-template-columns:1fr;gap:22px}.bio{grid-template-columns:1fr;gap:0}.hero h1{font-size:82px}}@media(max-width:480px){.wrap{width:90%}.brand .word{display:none}.scope{padding:13px 12px}.scopehead,.scopefoot{font-size:10px}.paper{grid-template-columns:40px 1fr 16px;gap:8px}.control{padding:5px 7px}footer .wrap{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap"><a class="brand" href="#main"><span class="mark">LY</span><span class="word">Leo Yu</span></a><nav aria-label="Main navigation"><a href="#research">Research</a><a href="#publications">Publications</a><a href="#profile">Profile</a></nav></div></header>
+<main id="main" class="wrap">
+<section class="hero" aria-labelledby="name"><div><div class="eyebrow">Mechanical engineering · Xiamen</div><h1 id="name">Leo Yu</h1><p>I study how machines sound and vibrate. I use microphone arrays to locate noise sources and sparse signal models to uncover early signs of faults in bearings and gears.</p><a class="action" href="#publications">Selected publications ↓</a></div>
+<figure class="scopebox"><div class="scope"><div class="scopehead meta"><span>ARRAY RESPONSE</span><span>Broadside · 0°</span></div><canvas id="pattern" width="780" height="440" role="img" aria-label="Normalized array response, plotted from minus 90 to plus 90 degrees"></canvas><div class="scopefoot meta"><span>Array elements</span><div id="controls" role="group" aria-label="Number of array elements"><button class="control" aria-pressed="false">4</button><button class="control" aria-pressed="true">8</button><button class="control" aria-pressed="false">16</button></div></div></div><figcaption id="caption" aria-live="polite">Simulated uniform linear array · half-wavelength spacing.</figcaption></figure></section>
+<section class="band" id="research"><h2>Research directions</h2><div class="topics"><article class="topic"><h3>Acoustic imaging</h3><p>I use microphone arrays and compressive beamforming to locate sound sources, including sources that fall between the points of a reconstruction grid.</p></article><article class="topic"><h3>Vibration signal processing</h3><p>I develop sparse representations that separate repetitive impacts from background vibration and track fault signatures as shaft speed changes.</p></article><article class="topic"><h3>Machinery diagnostics</h3><p>I study how the timing of impacts and the harmonic structure of gear vibration can reveal bearing and gearbox faults.</p></article></div></section>
+<section class="band" id="publications"><h2>Selected publications</h2>
+<a class="paper" href="https://dblp.org/rec/journals/sigpro/YuWWZL25"><small>2025</small><span><strong>Periodicity-constrained reweighted generalized minimax-concave regularization and its application in gearbox fault diagnosis</strong><em>Signal Processing · Volume 234, article 110005</em></span><span class="arrow" aria-hidden="true">↗</span></a>
+<a class="paper" href="https://dblp.org/rec/journals/tim/YuWZL25"><small>2025</small><span><strong>Sparse Time-Frequency Representation via Greedy Method for Diagnosing Bearing Fault Under Variable Speed Conditions</strong><em>IEEE Transactions on Instrumentation and Measurement</em></span><span class="arrow" aria-hidden="true">↗</span></a>
+<a class="paper" href="https://doi.org/10.3390/s24082445"><small>2024</small><span><strong>Bearing Fault Diagnosis via Stepwise Sparse Regularization with an Adaptive Sparse Dictionary</strong><em>Sensors · Volume 24, article 2445</em></span><span class="arrow" aria-hidden="true">↗</span></a>
+<a class="paper" href="https://doi.org/10.3901/JME.2020.22.046"><small>2020</small><span><strong>Two-dimensional Dynamic Grid Compressive Beamforming for Acoustic Source Identification</strong><em>Journal of Mechanical Engineering · With Xiaopeng Fan and colleagues</em></span><span class="arrow" aria-hidden="true">↗</span></a>
+</section><section class="band bio" id="profile"><h2>Profile</h2><div><p>I am a lecturer at Xiamen Ocean Vocational College and hold a PhD in Engineering from Xiamen University. My publications appear under the name Lichao Yu (余立超).</p><p>Alongside my research, I teach mechanical engineering, drawing on my previous experience as a software engineer.</p><a href="https://orcid.org/0000-0003-0864-7725">ORCID profile ↗</a></div></section>
+</main><footer><div class="wrap"><span>Leo Yu · Xiamen, China</span><a href="https://github.com/LeoYu-Xmoc">GitHub ↗</a></div></footer>
+<script>
+const canvas = document.getElementById('pattern');
+const ctx = canvas.getContext('2d');
+function draw(elements) {
+  const width = 780, height = 440, x = width / 2, y = 373, radius = 316;
+  ctx.clearRect(0, 0, width, height);
+  ctx.lineWidth = 1.6;
+  ctx.font = '18px monospace';
+  ctx.textAlign = 'center';
+  for (let i = 1; i <= 4; i++) {
+    ctx.strokeStyle = '#37575c';
+    ctx.beginPath(); ctx.arc(x,y,radius*i/4,Math.PI,2*Math.PI); ctx.stroke();
+  }
+  for (let degrees = -90; degrees <= 90; degrees += 30) {
+    const angle = degrees * Math.PI / 180;
+    const sx = Math.sin(angle), cy = Math.cos(angle);
+    ctx.beginPath(); ctx.moveTo(x,y); ctx.lineTo(x+radius*sx,y-radius*cy); ctx.stroke();
+    ctx.fillStyle = '#b4c9ca';
+    ctx.fillText(degrees+'°',x+(radius+28)*sx,y-(radius+24)*cy+5);
+  }
+  ctx.beginPath(); ctx.moveTo(x,y);
+  for (let i = 0; i <= 1440; i++) {
+    const angle = (i/1440-.5)*Math.PI, phase = Math.PI*Math.sin(angle)/2;
+    const amplitude = Math.abs(phase)<1e-10 ? 1 : Math.abs(Math.sin(elements*phase)/(elements*Math.sin(phase)));
+    const db = Math.max(-40,20*Math.log10(Math.max(amplitude,1e-10)));
+    const r = radius*(1+db/40);
+    ctx.lineTo(x+r*Math.sin(angle),y-r*Math.cos(angle));
+  }
+  ctx.closePath(); ctx.fillStyle='rgba(113,250,198,.18)'; ctx.fill();
+  ctx.lineWidth=3.5; ctx.strokeStyle='#9ff9ce'; ctx.stroke();
+  ctx.fillStyle='#b4c9ca';ctx.fillText('Normalized level · 10 dB / ring',x,height-18);
+  document.getElementById('caption').textContent = 'Simulated '+elements+'-element uniform linear array · half-wavelength spacing.';
+}
+document.querySelectorAll('.control').forEach(button => button.addEventListener('click', () => {
+  document.querySelectorAll('.control').forEach(other => other.setAttribute('aria-pressed',String(other===button)));
+  draw(Number(button.textContent));
+}));
+draw(8);
+</script>
+</body></html>
